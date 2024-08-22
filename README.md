@@ -2,18 +2,23 @@
 ## Overview
 this is a simple example of how to deploy a Dify project on Azure using terraform.
 ## Topology
-Front-end access:
+**Front-end access:**
+application Gateway 
+**Back-end components:**
+Azure Kubernetes Service (AKS) with the following components:
+业务服务 web，api，worker 
+基础服务 sandbox，ssrf_proxy 
 
-Application Gateway 
-Back-end components:
-
-web -> Azure Kubernetes Service
-api -> Azure Kubernetes Service
-worker -> Azure Kubernetes Service
-sandbox -> Azure Kubernetes Service
-ssrf_proxy -> Azure Kubernetes Service
-db -> Azure Database for PostgreSQL
-vectordb -> Azure Database for PostgreSQL
-redis -> Azure Cache for Redis
+**Database and vectordb components:**
+Azure Database for PostgreSQL
+**Cache components:**
+Azure Cache for Redis
 
 Before you provision Dify, please check and set the variables in dev-variables.tfvars file.
+
+## Deploy
+```bash
+terraform init
+terraform plan dev-plan -var-file=./enviroment/dev-variables.tfvars
+terraform apply dev-plan
+```
