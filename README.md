@@ -9,6 +9,6 @@ Before you provision Dify, please check and set the variables in dev-variables.t
 ## Deploy
 ```bash
 terraform init
-terraform plan dev-plan -var-file=./enviroment/dev-variables.tfvars
-terraform apply dev-plan
+terraform plan -out=dev-plan -var-file="./environments/dev-variables.tfvars"
+terraform apply "dev-plan"
 ```
