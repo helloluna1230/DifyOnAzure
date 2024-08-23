@@ -8,3 +8,4 @@ variable "max_pods" {}
 variable "appgw_name" {}
 variable "subnet_appgw" {}
 variable "kubernetes_version" {}
+variable "vnet_id" {}

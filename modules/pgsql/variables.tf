@@ -5,6 +5,7 @@ variable "pgsql_name" {}
 variable "zone_name" {}
 variable "vnet_name" {}
 variable "vnet_id" {}
+variable "zone" {}
 
 
 variable "pgsql_sku_name" {
@@ -58,4 +59,10 @@ variable "postgresql_configurations" {
 variable "pgsql_vnet_subnet_id" {
   description = "The subnet id for the database."
   type        = string
+}
+
+variable "pg_zone" {
+  description = "The zone for the PostgreSQL Flexible Server."
+  type        = string
+  default     = "1"
 }

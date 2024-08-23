@@ -116,6 +116,10 @@ variable "pgsql_sku_name" {
   default = "GP_Standard_D2s_v3"
 }
 
+variable "pg_zone" {
+  default = "1"
+}
+
 variable "filename" {
 }
 

@@ -5,7 +5,7 @@ sp-client-secret = <client-secret>
 sp-tenant-id = <tenant-id>
 
 name = "dify"
-environment = "dev"
+environment = "prod"
 location = "eastus2"
 
 #subnet
@@ -45,6 +45,7 @@ pgsql_admin_login                    = "postgres"
 pgsql_admin_password                 = "Test1234t"
 pgsql_version                        = "15"
 pgsql_storage_mb                     = "32768"
+pg_zone                                 = "1"
 
 # aks
 kubernetes_version = "1.28.9"

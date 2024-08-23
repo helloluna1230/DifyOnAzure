@@ -36,10 +36,9 @@ resource "azurerm_postgresql_flexible_server" "pgsql" {
   public_network_access_enabled = false
   delegated_subnet_id    = "${ var.pgsql_vnet_subnet_id}"
   private_dns_zone_id    = azurerm_private_dns_zone.pgsql_dns_zone.id
-
   administrator_login    = var.pgsql_admin_login
   administrator_password = var.pgsql_admin_password
-  # zone                    = "2"
+  zone                   = var.pg_zone
   storage_mb = var.pgsql_storage_mb
 
   # Set the backup retention policy to 7 for non-prod, and 30 for prod

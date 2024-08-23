@@ -39,6 +39,7 @@ module "pgsql" {
   pgsql_sku_name       = var.pgsql_sku_name
   pgsql_storage_mb     = var.pgsql_storage_mb
   pgsql_vnet_subnet_id = module.subnet.subnet_ids.snet-db # The subnet id for the database.
+  zone                 = var.pg_zone
 
   depends_on = [module.subnet]
 }
@@ -56,6 +57,7 @@ module "aks" {
   appgw_name          = "${var.name}-${var.environment}-appgw"
   subnet_appgw        = module.subnet.subnet_ids.snet-appgw
   depends_on          = [module.subnet, module.redis, module.pgsql]
+  vnet_id             = module.subnet.vnet_id
 }
 
 data "azurerm_kubernetes_cluster" "default" {
