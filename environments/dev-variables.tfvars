@@ -5,6 +5,7 @@ sp-client-id = <client-id>
 sp-client-secret = <client-secret>
 sp-tenant-id = <tenant-id>
 
+# need to change to your name and environment, resource will using {name}-{environment} as prefix
 name = "dify"
 environment = "prod"
 location = "eastus2"
