@@ -1,4 +1,5 @@
 # Login to Azure using service principal, and set the subscription id, client id, client secret and tenant id
+# service principal role need owner, because it will grant permissions to the application gateway
 sp-subscription-id = <subscription-id>
 sp-client-id = <client-id>
 sp-client-secret = <client-secret>
