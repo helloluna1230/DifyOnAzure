@@ -79,6 +79,7 @@ provider "helm" {
 */
 
 resource "null_resource" "wait_for_kubeconfig" {
+  depends_on = [module.aks]
   provisioner "local-exec" {
     command =  "az aks get-credentials --resource-group ${azurerm_resource_group.rg.name} --name ${var.name}-${var.environment}-aks"
     working_dir = path.module
