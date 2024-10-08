@@ -1,6 +1,6 @@
 # Dify on Azure
 ## Overview
-this is a simple example of how to deploy a Dify project on Azure.
+HI,this is a simple example of how to deploy a Dify project on Azure. 
 ## Topology
 ![Topology](./images/image.png)
 
